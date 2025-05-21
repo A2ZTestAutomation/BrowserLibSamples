@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.9.6 on win32)" generated="2025-05-08T13:06:18.352814" rpa="false" schemaversion="5">
+<suite id="s1" name="Full Regression Test" source="F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\parallelTests">
+<suite id="s1-s1" name="gherkn loginTC" source="F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\parallelTests\gherkn_loginTC.robot">
+<test id="s1-s1-t1" name="Valid Login" line="8">
+<kw name="Given browser is opened to login page">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-05-08T13:06:18.607105" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-05-08T13:06:18.608614" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "F:\\Anandhi\\workspace\\robotframework\\FirstSampleProjBrowserLib\\results\\pabot_results\\1\\browser\\traces\\temp\\9b5343a2-2e9d-45df-9144-bfefd5f78fc4"}</msg>
+<msg time="2025-05-08T13:06:18.637499" level="INFO">Starting Browser process C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\index.js using port 55769</msg>
+<msg time="2025-05-08T13:06:18.637499" level="INFO">Node startup parameters: ['node', 'C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\Browser\\wrapper\\index.js', '55769']</msg>
+<msg time="2025-05-08T13:06:20.049351" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"F:\\Anandhi\\workspace\\robotframework\\FirstSampleProjBrowserLib\\results\\pabot_results\\1\\browser\\traces\\temp\\9b5343a2-2e9d-45df-9144-bfefd5f78fc4"}</msg>
+<msg time="2025-05-08T13:06:20.052491" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-05-08T13:06:20.099375" level="INFO">Successfully created context. </msg>
+<msg time="2025-05-08T13:06:20.100373" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<msg time="2025-05-08T13:06:23.983663" level="INFO">Successfully initialized new page object and opened url: https://the-internet.herokuapp.com/login</msg>
+<arg>https://the-internet.herokuapp.com/login</arg>
+<arg>${browser}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-05-08T13:06:18.606106" elapsed="5.377557"/>
+</kw>
+<status status="PASS" start="2025-05-08T13:06:18.605109" elapsed="5.379564"/>
+</kw>
+<kw name="When user &quot;tomsmith&quot; logs in with password &quot;SuperSecretPassword!&quot;" source_name="User &quot;${username}&quot; logs in with password &quot;${password}&quot;">
+<kw name="Type Text" owner="Browser">
+<msg time="2025-05-08T13:06:23.985668" level="INFO">Types the text 'tomsmith' in the given field.</msg>
+<arg>\#username</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-05-08T13:06:23.985668" elapsed="0.116313"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-05-08T13:06:24.103487" level="INFO">Types the text 'SuperSecretPassword!' in the given field.</msg>
+<arg>\#password</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-05-08T13:06:24.102485" elapsed="0.069636"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-05-08T13:06:24.174130" level="INFO">Clicks the element 'button.radius'.</msg>
+<arg>button.radius</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-08T13:06:24.173127" elapsed="0.566703"/>
+</kw>
+<status status="PASS" start="2025-05-08T13:06:23.984673" elapsed="0.755157"/>
+</kw>
+<kw name="Then should display success message">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-05-08T13:06:24.822393" level="INFO">Text: ' You logged into a secure area!\n×'</msg>
+<msg time="2025-05-08T13:06:24.823396" level="INFO">${flashMessage} =  You logged into a secure area!
+×</msg>
+<var>${flashMessage}</var>
+<arg>\#flash</arg>
+<arg>*=</arg>
+<arg>You logged into a secure area!</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-08T13:06:24.741950" elapsed="0.081446"/>
+</kw>
+<status status="PASS" start="2025-05-08T13:06:24.739830" elapsed="0.083566"/>
+</kw>
+<msg time="2025-05-08T13:06:24.832603" level="INFO">Set timeout to: 10000</msg>
+<msg time="2025-05-08T13:06:24.857142" level="INFO">Switching context to context=0775c5bc-a4a8-4161-80a7-5533e7f48001 in CURRENT</msg>
+<msg time="2025-05-08T13:06:24.870447" level="INFO">Successfully changed active context: context=0775c5bc-a4a8-4161-80a7-5533e7f48001</msg>
+<msg time="2025-05-08T13:06:24.925088" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2025-05-08T13:06:18.604111" elapsed="6.220282"/>
+</test>
+<status status="PASS" start="2025-05-08T13:06:18.388512" elapsed="6.537941"/>
+</suite>
+<status status="PASS" start="2025-05-08T13:06:18.368274" elapsed="6.576614"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Full Regression Test" id="s1" pass="1" fail="0" skip="0">Full Regression Test</stat>
+<stat name="gherkn loginTC" id="s1-s1" pass="1" fail="0" skip="0">Full Regression Test.gherkn loginTC</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-08T13:06:18.607105" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+</errors>
+</robot>

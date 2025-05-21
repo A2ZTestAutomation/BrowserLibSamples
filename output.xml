@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Rebot 7.2 (Python 3.9.6 on win32)" generated="2025-05-21T12:40:11.437703" rpa="false" schemaversion="5">
+<suite id="s1" name="parallelTests" source="F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\parallelTests">
+<suite id="s1-s1" name="AlertTC" source="F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\parallelTests\AlertTC.robot">
+<test id="s1-s1-t1" name="Handling normal alert" line="11">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-05-21T12:40:02.152235" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-05-21T12:40:02.152235" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "F:\\Anandhi\\workspace\\robotframework\\FirstSampleProjBrowserLib\\pabot_results\\0\\browser\\traces\\temp\\cb987e1e-4b00-46ed-bc7b-eab1d8dc7832"}</msg>
+<msg time="2025-05-21T12:40:02.182477" level="INFO">Starting Browser process C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\index.js using port 60318</msg>
+<msg time="2025-05-21T12:40:02.183601" level="INFO">Node startup parameters: ['node', 'C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\Browser\\wrapper\\index.js', '60318']</msg>
+<msg time="2025-05-21T12:40:03.630904" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"F:\\Anandhi\\workspace\\robotframework\\FirstSampleProjBrowserLib\\pabot_results\\0\\browser\\traces\\temp\\cb987e1e-4b00-46ed-bc7b-eab1d8dc7832"}</msg>
+<msg time="2025-05-21T12:40:03.633406" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-05-21T12:40:03.669304" level="INFO">Successfully created context. </msg>
+<msg time="2025-05-21T12:40:03.670306" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<msg time="2025-05-21T12:40:06.868619" level="INFO">Successfully initialized new page object and opened url: https://testautomationpractice.blogspot.com/</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-05-21T12:40:02.150673" elapsed="4.718980"/>
+</kw>
+<kw name="Promise To" owner="Browser">
+<msg time="2025-05-21T12:40:06.874739" level="INFO">${promise} = &lt;Future at 0x1a716bfcb50 state=running&gt;</msg>
+<var>${promise}</var>
+<arg>Wait For Alert</arg>
+<arg>action=accept</arg>
+<arg>text= I am an alert box!</arg>
+<tag>Wait</tag>
+<doc>Wrap a Browser library keyword and make it a promise.</doc>
+<status status="PASS" start="2025-05-21T12:40:06.869653" elapsed="0.005086"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-05-21T12:40:06.878487" level="INFO">Clicks the element '#alertBtn'.</msg>
+<arg>\#alertBtn</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-21T12:40:06.874739" elapsed="0.134186"/>
+</kw>
+<kw name="Wait For" owner="Browser">
+<msg time="2025-05-21T12:40:07.009924" level="INFO">${text} = I am an alert box!</msg>
+<var>${text}</var>
+<arg>${promise}</arg>
+<tag>Wait</tag>
+<doc>Waits for promises to finish and returns results from them.</doc>
+<status status="PASS" start="2025-05-21T12:40:07.008925" elapsed="0.000999"/>
+</kw>
+<kw name="Promise To" owner="Browser">
+<msg time="2025-05-21T12:40:07.026458" level="INFO">${promise} = &lt;Future at 0x1a717542970 state=running&gt;</msg>
+<var>${promise}</var>
+<arg>Wait For Alert</arg>
+<arg>action=dismiss</arg>
+<arg>text= Press a button!</arg>
+<tag>Wait</tag>
+<doc>Wrap a Browser library keyword and make it a promise.</doc>
+<status status="PASS" start="2025-05-21T12:40:07.009924" elapsed="0.016534"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-05-21T12:40:07.028411" level="INFO">Clicks the element '#confirmBtn'.</msg>
+<arg>\#confirmBtn</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-21T12:40:07.027413" elapsed="0.177829"/>
+</kw>
+<kw name="Wait For" owner="Browser">
+<msg time="2025-05-21T12:40:07.207750" level="INFO">${text} = Press a button!</msg>
+<var>${text}</var>
+<arg>${promise}</arg>
+<tag>Wait</tag>
+<doc>Waits for promises to finish and returns results from them.</doc>
+<status status="PASS" start="2025-05-21T12:40:07.205748" elapsed="0.002002"/>
+</kw>
+<kw name="Promise To" owner="Browser">
+<msg time="2025-05-21T12:40:07.225314" level="INFO">${promise} = &lt;Future at 0x1a716c323a0 state=running&gt;</msg>
+<var>${promise}</var>
+<arg>Wait For Alert</arg>
+<arg>action=accept</arg>
+<arg>prompt_input=Hello Welcome</arg>
+<tag>Wait</tag>
+<doc>Wrap a Browser library keyword and make it a promise.</doc>
+<status status="PASS" start="2025-05-21T12:40:07.208747" elapsed="0.017567"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-05-21T12:40:07.227309" level="INFO">Clicks the element '#promptBtn'.</msg>
+<arg>\#promptBtn</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-21T12:40:07.226314" elapsed="0.108400"/>
+</kw>
+<kw name="Wait For" owner="Browser">
+<msg time="2025-05-21T12:40:07.335715" level="INFO">${text} = Please enter your name:</msg>
+<var>${text}</var>
+<arg>${promise}</arg>
+<tag>Wait</tag>
+<doc>Waits for promises to finish and returns results from them.</doc>
+<status status="PASS" start="2025-05-21T12:40:07.334714" elapsed="0.001001"/>
+</kw>
+<msg time="2025-05-21T12:40:07.342229" level="INFO">Set timeout to: 10000</msg>
+<msg time="2025-05-21T12:40:07.369262" level="INFO">Switching context to context=9b4bafe5-a623-49b4-9677-3f5e8b1e4791 in CURRENT</msg>
+<msg time="2025-05-21T12:40:07.382337" level="INFO">Successfully changed active context: context=9b4bafe5-a623-49b4-9677-3f5e8b1e4791</msg>
+<msg time="2025-05-21T12:40:07.425518" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2025-05-21T12:40:02.150673" elapsed="5.185042"/>
+</test>
+<status status="PASS" start="2025-05-21T12:40:01.967000" elapsed="5.185000"/>
+</suite>
+<suite id="s1-s2" name="gherkn loginTC" source="F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\parallelTests\gherkn_loginTC.robot">
+<test id="s1-s2-t1" name="Valid Login" line="8">
+<kw name="Given browser is opened to login page">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-05-21T12:40:02.150673" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-05-21T12:40:02.152235" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "F:\\Anandhi\\workspace\\robotframework\\FirstSampleProjBrowserLib\\pabot_results\\1\\browser\\traces\\temp\\f4eeb181-ecc1-46e9-8405-f596f81ba647"}</msg>
+<msg time="2025-05-21T12:40:02.182477" level="INFO">Starting Browser process C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\index.js using port 60317</msg>
+<msg time="2025-05-21T12:40:02.183601" level="INFO">Node startup parameters: ['node', 'C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\Browser\\wrapper\\index.js', '60317']</msg>
+<msg time="2025-05-21T12:40:03.633406" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"F:\\Anandhi\\workspace\\robotframework\\FirstSampleProjBrowserLib\\pabot_results\\1\\browser\\traces\\temp\\f4eeb181-ecc1-46e9-8405-f596f81ba647"}</msg>
+<msg time="2025-05-21T12:40:03.636017" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-05-21T12:40:03.702180" level="INFO">Successfully created context. </msg>
+<msg time="2025-05-21T12:40:03.702180" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<msg time="2025-05-21T12:40:09.973350" level="INFO">Successfully initialized new page object and opened url: https://the-internet.herokuapp.com/login</msg>
+<arg>https://the-internet.herokuapp.com/login</arg>
+<arg>${browser}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-05-21T12:40:02.150673" elapsed="7.822677"/>
+</kw>
+<status status="PASS" start="2025-05-21T12:40:02.149707" elapsed="7.823643"/>
+</kw>
+<kw name="When user &quot;tomsmith&quot; logs in with password &quot;SuperSecretPassword!&quot;" source_name="User &quot;${username}&quot; logs in with password &quot;${password}&quot;">
+<kw name="Type Text" owner="Browser">
+<msg time="2025-05-21T12:40:09.976011" level="INFO">Types the text 'tomsmith' in the given field.</msg>
+<arg>\#username</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-05-21T12:40:09.975008" elapsed="0.070853"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-05-21T12:40:10.047368" level="INFO">Types the text 'SuperSecretPassword!' in the given field.</msg>
+<arg>\#password</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-05-21T12:40:10.045861" elapsed="0.048717"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-05-21T12:40:10.096089" level="INFO">Clicks the element 'button.radius'.</msg>
+<arg>button.radius</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-21T12:40:10.094578" elapsed="0.517846"/>
+</kw>
+<status status="PASS" start="2025-05-21T12:40:09.974505" elapsed="0.637919"/>
+</kw>
+<kw name="Then should display success message">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-05-21T12:40:10.682842" level="INFO">Text: ' You logged into a secure area!\n×'</msg>
+<msg time="2025-05-21T12:40:10.682842" level="INFO">${flashMessage} =  You logged into a secure area!
+×</msg>
+<var>${flashMessage}</var>
+<arg>\#flash</arg>
+<arg>*=</arg>
+<arg>You logged into a secure area!</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-21T12:40:10.614742" elapsed="0.068100"/>
+</kw>
+<status status="PASS" start="2025-05-21T12:40:10.613739" elapsed="0.070545"/>
+</kw>
+<msg time="2025-05-21T12:40:10.688247" level="INFO">Set timeout to: 10000</msg>
+<msg time="2025-05-21T12:40:10.709979" level="INFO">Switching context to context=5026d3f2-338d-42ee-ae26-caab3f797d3f in CURRENT</msg>
+<msg time="2025-05-21T12:40:10.722210" level="INFO">Successfully changed active context: context=5026d3f2-338d-42ee-ae26-caab3f797d3f</msg>
+<msg time="2025-05-21T12:40:10.764296" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2025-05-21T12:40:02.148715" elapsed="8.535569"/>
+</test>
+<status status="PASS" start="2025-05-21T12:40:01.962370" elapsed="8.804559"/>
+</suite>
+<doc>[https://pabot.org/?ref=log|Pabot] result from 2 executions.</doc>
+<status status="PASS" start="2025-05-21T12:40:01.941000" elapsed="8.839000"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="parallelTests" id="s1" pass="2" fail="0" skip="0">parallelTests</stat>
+<stat name="AlertTC" id="s1-s1" pass="1" fail="0" skip="0">parallelTests.AlertTC</stat>
+<stat name="gherkn loginTC" id="s1-s2" pass="1" fail="0" skip="0">parallelTests.gherkn loginTC</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-21T12:40:02.152235" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-05-21T12:40:02.150673" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+</errors>
+</robot>

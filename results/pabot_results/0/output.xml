@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.9.6 on win32)" generated="2025-05-08T13:06:18.353812" rpa="false" schemaversion="5">
+<suite id="s1" name="Full Regression Test" source="F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\parallelTests">
+<suite id="s1-s1" name="AlertTC" source="F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\parallelTests\AlertTC.robot">
+<test id="s1-s1-t1" name="Handling normal alert" line="11">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-05-08T13:06:18.604111" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-05-08T13:06:18.604111" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "F:\\Anandhi\\workspace\\robotframework\\FirstSampleProjBrowserLib\\results\\pabot_results\\0\\browser\\traces\\temp\\721aef7f-e972-4337-8717-3ee1b6a4dee1"}</msg>
+<msg time="2025-05-08T13:06:18.637499" level="INFO">Starting Browser process C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\index.js using port 55770</msg>
+<msg time="2025-05-08T13:06:18.637499" level="INFO">Node startup parameters: ['node', 'C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\Browser\\wrapper\\index.js', '55770']</msg>
+<msg time="2025-05-08T13:06:20.050480" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"F:\\Anandhi\\workspace\\robotframework\\FirstSampleProjBrowserLib\\results\\pabot_results\\0\\browser\\traces\\temp\\721aef7f-e972-4337-8717-3ee1b6a4dee1"}</msg>
+<msg time="2025-05-08T13:06:20.052491" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-05-08T13:06:20.091866" level="INFO">Successfully created context. </msg>
+<msg time="2025-05-08T13:06:20.092860" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<msg time="2025-05-08T13:06:24.037318" level="INFO">Successfully initialized new page object and opened url: https://testautomationpractice.blogspot.com/</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-05-08T13:06:18.603113" elapsed="5.434205"/>
+</kw>
+<kw name="Promise To" owner="Browser">
+<msg time="2025-05-08T13:06:24.052695" level="INFO">${promise} = &lt;Future at 0x1bc2796bb50 state=running&gt;</msg>
+<var>${promise}</var>
+<arg>Wait For Alert</arg>
+<arg>action=accept</arg>
+<arg>text= I am an alert box!</arg>
+<tag>Wait</tag>
+<doc>Wrap a Browser library keyword and make it a promise.</doc>
+<status status="PASS" start="2025-05-08T13:06:24.037318" elapsed="0.015377"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-05-08T13:06:24.058871" level="INFO">Clicks the element '#alertBtn'.</msg>
+<arg>\#alertBtn</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-08T13:06:24.052695" elapsed="0.123431"/>
+</kw>
+<kw name="Wait For" owner="Browser">
+<msg time="2025-05-08T13:06:24.178630" level="INFO">${text} = I am an alert box!</msg>
+<var>${text}</var>
+<arg>${promise}</arg>
+<tag>Wait</tag>
+<doc>Waits for promises to finish and returns results from them.</doc>
+<status status="PASS" start="2025-05-08T13:06:24.177122" elapsed="0.001508"/>
+</kw>
+<kw name="Promise To" owner="Browser">
+<msg time="2025-05-08T13:06:24.197264" level="INFO">${promise} = &lt;Future at 0x1bc282b3970 state=running&gt;</msg>
+<var>${promise}</var>
+<arg>Wait For Alert</arg>
+<arg>action=dismiss</arg>
+<arg>text= Press a button!</arg>
+<tag>Wait</tag>
+<doc>Wrap a Browser library keyword and make it a promise.</doc>
+<status status="PASS" start="2025-05-08T13:06:24.180042" elapsed="0.017222"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-05-08T13:06:24.198771" level="INFO">Clicks the element '#confirmBtn'.</msg>
+<arg>\#confirmBtn</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-08T13:06:24.197264" elapsed="0.139888"/>
+</kw>
+<kw name="Wait For" owner="Browser">
+<msg time="2025-05-08T13:06:24.340677" level="INFO">${text} = Press a button!</msg>
+<var>${text}</var>
+<arg>${promise}</arg>
+<tag>Wait</tag>
+<doc>Waits for promises to finish and returns results from them.</doc>
+<status status="PASS" start="2025-05-08T13:06:24.338661" elapsed="0.002016"/>
+</kw>
+<kw name="Promise To" owner="Browser">
+<msg time="2025-05-08T13:06:24.363950" level="INFO">${promise} = &lt;Future at 0x1bc2818dc10 state=running&gt;</msg>
+<var>${promise}</var>
+<arg>Wait For Alert</arg>
+<arg>action=accept</arg>
+<arg>prompt_input=Hello Welcome</arg>
+<tag>Wait</tag>
+<doc>Wrap a Browser library keyword and make it a promise.</doc>
+<status status="PASS" start="2025-05-08T13:06:24.341680" elapsed="0.022270"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-05-08T13:06:24.364948" level="INFO">Clicks the element '#promptBtn'.</msg>
+<arg>\#promptBtn</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-08T13:06:24.363950" elapsed="0.077713"/>
+</kw>
+<kw name="Wait For" owner="Browser">
+<msg time="2025-05-08T13:06:24.444614" level="INFO">${text} = Please enter your name:</msg>
+<var>${text}</var>
+<arg>${promise}</arg>
+<tag>Wait</tag>
+<doc>Waits for promises to finish and returns results from them.</doc>
+<status status="PASS" start="2025-05-08T13:06:24.443014" elapsed="0.001600"/>
+</kw>
+<msg time="2025-05-08T13:06:24.451113" level="INFO">Set timeout to: 10000</msg>
+<msg time="2025-05-08T13:06:24.469115" level="INFO">Switching context to context=40dcd132-57c8-4fe3-9513-8fb473c41692 in CURRENT</msg>
+<msg time="2025-05-08T13:06:24.481854" level="INFO">Successfully changed active context: context=40dcd132-57c8-4fe3-9513-8fb473c41692</msg>
+<msg time="2025-05-08T13:06:24.526227" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2025-05-08T13:06:18.602114" elapsed="5.843944"/>
+</test>
+<status status="PASS" start="2025-05-08T13:06:18.389513" elapsed="6.137712"/>
+</suite>
+<status status="PASS" start="2025-05-08T13:06:18.367768" elapsed="6.176302"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Full Regression Test" id="s1" pass="1" fail="0" skip="0">Full Regression Test</stat>
+<stat name="AlertTC" id="s1-s1" pass="1" fail="0" skip="0">Full Regression Test.AlertTC</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-08T13:06:18.604111" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+</errors>
+</robot>

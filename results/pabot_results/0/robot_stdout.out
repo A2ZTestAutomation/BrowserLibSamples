@@ -1,0 +1,14 @@
+==============================================================================
+Full Regression Test                                                          
+==============================================================================
+Full Regression Test.AlertTC                                                  
+==============================================================================
+Handling normal alert                                                 | PASS |
+------------------------------------------------------------------------------
+Full Regression Test.AlertTC                                          | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Full Regression Test                                                  | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\results\pabot_results\0\output.xml

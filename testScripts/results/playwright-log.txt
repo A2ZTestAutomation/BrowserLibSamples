@@ -1,0 +1,162 @@
+{"level":30,"time":"2025-03-13T11:59:21.678Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Listening on 65016"}
+(node:21688) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\index.js:12223:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\index.js:13119:59)
+    at PlaywrightServer.setTimeout (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\index.js:13367:57)
+    at Object.onReceiveHalfClose (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1425:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:569:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:609:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-03-13T11:59:22.152Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-13T11:59:22.153Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-13T11:59:22.158Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-13T11:59:22.158Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-13T11:59:22.166Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-03-13T11:59:22.401Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Adding browser to stack: chromium, version: 133.0.6943.16"}
+{"level":30,"time":"2025-03-13T11:59:22.402Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-03-13T11:59:22.401Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-03-13T11:59:22.409Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-03-13T11:59:22.409Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":true,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}}"}
+{"level":30,"time":"2025-03-13T11:59:22.409Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-13T11:59:22.409Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Trace file: "}
+{"level":30,"time":"2025-03-13T11:59:22.427Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Changed active context"}
+{"level":30,"time":"2025-03-13T11:59:22.427Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"End of node method newContext"}
+{"level":30,"time":"2025-03-13T11:59:22.432Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-03-13T11:59:22.433Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-03-13T11:59:22.637Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Video path: undefined"}
+{"level":30,"time":"2025-03-13T11:59:22.638Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Changed active page"}
+{"level":30,"time":"2025-03-13T11:59:23.626Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"End of node method newPage"}
+{"level":30,"time":"2025-03-13T11:59:28.646Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Start of node method getElements"}
+{"level":30,"time":"2025-03-13T11:59:28.648Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Strict mode is disabled, return Locator: h4.card-title in page."}
+{"level":30,"time":"2025-03-13T11:59:28.649Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Wait element to reach attached state."}
+{"level":30,"time":"2025-03-13T11:59:28.698Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Found 9 elements."}
+{"level":30,"time":"2025-03-13T11:59:28.699Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"End of node method getElements"}
+{"level":30,"time":"2025-03-13T11:59:28.706Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-13T11:59:28.706Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Strict mode is enabled, find Locator with h4.card-title >> nth=0 in page."}
+{"level":30,"time":"2025-03-13T11:59:28.732Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Retrieved text for element h4.card-title >> nth=0 containing Samsung galaxy s6"}
+{"level":30,"time":"2025-03-13T11:59:28.732Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-13T11:59:28.739Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-13T11:59:28.739Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Strict mode is enabled, find Locator with h4.card-title >> nth=1 in page."}
+{"level":30,"time":"2025-03-13T11:59:28.751Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Retrieved text for element h4.card-title >> nth=1 containing Nokia lumia 1520"}
+{"level":30,"time":"2025-03-13T11:59:28.751Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-13T11:59:28.757Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-13T11:59:28.757Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Strict mode is enabled, find Locator with h4.card-title >> nth=2 in page."}
+{"level":30,"time":"2025-03-13T11:59:28.769Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Retrieved text for element h4.card-title >> nth=2 containing Nexus 6"}
+{"level":30,"time":"2025-03-13T11:59:28.769Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-13T11:59:28.775Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-13T11:59:28.775Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Strict mode is enabled, find Locator with h4.card-title >> nth=3 in page."}
+{"level":30,"time":"2025-03-13T11:59:28.787Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Retrieved text for element h4.card-title >> nth=3 containing Samsung galaxy s7"}
+{"level":30,"time":"2025-03-13T11:59:28.787Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-13T11:59:28.792Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-13T11:59:28.793Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Strict mode is enabled, find Locator with h4.card-title >> nth=4 in page."}
+{"level":30,"time":"2025-03-13T11:59:28.805Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Retrieved text for element h4.card-title >> nth=4 containing Iphone 6 32gb"}
+{"level":30,"time":"2025-03-13T11:59:28.805Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-13T11:59:28.809Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-13T11:59:28.809Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Strict mode is enabled, find Locator with h4.card-title >> nth=5 in page."}
+{"level":30,"time":"2025-03-13T11:59:28.821Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Retrieved text for element h4.card-title >> nth=5 containing Sony xperia z5"}
+{"level":30,"time":"2025-03-13T11:59:28.821Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-13T11:59:28.825Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-13T11:59:28.825Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Strict mode is enabled, find Locator with h4.card-title >> nth=6 in page."}
+{"level":30,"time":"2025-03-13T11:59:28.837Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Retrieved text for element h4.card-title >> nth=6 containing HTC One M9"}
+{"level":30,"time":"2025-03-13T11:59:28.837Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-13T11:59:28.841Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-13T11:59:28.841Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Strict mode is enabled, find Locator with h4.card-title >> nth=7 in page."}
+{"level":30,"time":"2025-03-13T11:59:28.850Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Retrieved text for element h4.card-title >> nth=7 containing Sony vaio i5"}
+{"level":30,"time":"2025-03-13T11:59:28.850Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-13T11:59:28.856Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Start of node method getText"}
+{"level":30,"time":"2025-03-13T11:59:28.856Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Strict mode is enabled, find Locator with h4.card-title >> nth=8 in page."}
+{"level":30,"time":"2025-03-13T11:59:28.865Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Retrieved text for element h4.card-title >> nth=8 containing Sony vaio i7"}
+{"level":30,"time":"2025-03-13T11:59:28.865Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"End of node method getText"}
+{"level":30,"time":"2025-03-13T11:59:28.871Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2025-03-13T11:59:28.879Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Removed page=347631d3-9f5a-40ba-b3cd-22e1d7bfaff3 from context=558548a9-b935-4cb6-ba5c-5d24bd26ad04 page stack"}
+{"level":30,"time":"2025-03-13T11:59:29.161Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\index.js:12223:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\index.js:13119:59)
+    at PlaywrightServer.setTimeout (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\index.js:13367:57)
+    at Object.onReceiveHalfClose (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1425:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:569:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:609:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-03-13T11:59:29.189Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-13T11:59:29.189Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-13T11:59:29.193Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-13T11:59:29.193Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\index.js:12223:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\index.js:13119:59)
+    at PlaywrightServer.setTimeout (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\index.js:13367:57)
+    at Object.onReceiveHalfClose (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1425:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:569:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:609:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-03-13T11:59:29.233Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-13T11:59:29.233Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-13T11:59:29.237Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-13T11:59:29.237Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\index.js:12223:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\index.js:13119:59)
+    at PlaywrightServer.setTimeout (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\index.js:13367:57)
+    at Object.onReceiveHalfClose (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1425:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:569:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:609:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-03-13T11:59:29.271Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-13T11:59:29.271Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-13T11:59:29.275Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-13T11:59:29.275Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\index.js:12223:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\index.js:13119:59)
+    at PlaywrightServer.setTimeout (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\index.js:13367:57)
+    at Object.onReceiveHalfClose (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1425:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:569:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:609:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-03-13T11:59:29.325Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-13T11:59:29.325Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\index.js:12223:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\index.js:13119:59)
+    at PlaywrightServer.setTimeout (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\index.js:13367:57)
+    at Object.onReceiveHalfClose (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1425:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:569:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:609:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:376:18)
+    at ServerHttp2Stream.emit (node:events:530:35)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-03-13T11:59:29.356Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-13T11:59:29.357Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-03-13T11:59:29.411Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-03-13T11:59:29.411Z","pid":21688,"hostname":"DESKTOP-L8VPHJS","msg":"End of node method closeAllBrowsers"}

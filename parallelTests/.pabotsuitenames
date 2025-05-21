@@ -1,0 +1,6 @@
+datasources:6ec418a08630fa0fe2f4b3b27a7699fb3ea7c98e
+commandlineoptions:9f8598a690c7367accf83ead504756ddd374acc9
+suitesfrom:no-suites-from-option
+file:7b12d312d9cfff21e56b93db7a7162ed5403db7e
+--suite Suites.AlertTC
+--suite Suites.gherkn loginTC

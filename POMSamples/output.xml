@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.9.6 on win32)" generated="2025-04-12T21:41:16.828587" rpa="false" schemaversion="5">
+<suite id="s1" name="PlaceOrderTC" source="F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\POMSamples\PlaceOrderTC.robot">
+<kw name="LaunchApp" owner="AppResource" type="SETUP">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-04-12T21:41:17.058132" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-04-12T21:41:17.058132" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "F:\\Anandhi\\workspace\\robotframework\\FirstSampleProjBrowserLib\\POMSamples\\browser\\traces\\temp\\3652d548-1820-49fb-9648-6467ae184ce0"}</msg>
+<msg time="2025-04-12T21:41:17.090692" level="INFO">Starting Browser process C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\index.js using port 65258</msg>
+<msg time="2025-04-12T21:41:17.090692" level="INFO">Node startup parameters: ['node', 'C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\Browser\\wrapper\\index.js', '65258']</msg>
+<msg time="2025-04-12T21:41:18.441603" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"F:\\Anandhi\\workspace\\robotframework\\FirstSampleProjBrowserLib\\POMSamples\\browser\\traces\\temp\\3652d548-1820-49fb-9648-6467ae184ce0"}</msg>
+<msg time="2025-04-12T21:41:18.441603" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-04-12T21:41:18.473243" level="INFO">Successfully created context. </msg>
+<msg time="2025-04-12T21:41:18.473243" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<msg time="2025-04-12T21:41:19.399014" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com/</msg>
+<arg>${baseUrl}</arg>
+<arg>${browser}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-04-12T21:41:17.058132" elapsed="2.341716"/>
+</kw>
+<status status="PASS" start="2025-04-12T21:41:17.058132" elapsed="2.342227"/>
+</kw>
+<test id="s1-t1" name="Valid Login Test" line="11">
+<kw name="Enter Username" owner="LoginPageResource">
+<kw name="Type Text" owner="Browser">
+<msg time="2025-04-12T21:41:19.420462" level="INFO">Types the text 'standard_user' in the given field.</msg>
+<arg>${loginid}</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-04-12T21:41:19.420462" elapsed="0.103413"/>
+</kw>
+<status status="PASS" start="2025-04-12T21:41:19.418523" elapsed="0.105352"/>
+</kw>
+<kw name="Enter Password" owner="LoginPageResource">
+<kw name="Type Text" owner="Browser">
+<msg time="2025-04-12T21:41:19.523875" level="INFO">Types the text 'secret_sauce' in the given field.</msg>
+<arg>${loginpwd}</arg>
+<arg>${pwd}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-04-12T21:41:19.523875" elapsed="0.047450"/>
+</kw>
+<status status="PASS" start="2025-04-12T21:41:19.523875" elapsed="0.047450"/>
+</kw>
+<kw name="Click LoginBtn" owner="LoginPageResource">
+<kw name="Click" owner="Browser">
+<msg time="2025-04-12T21:41:19.571325" level="INFO">Clicks the element 'id=login-button'.</msg>
+<arg>${loginBtn}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-04-12T21:41:19.571325" elapsed="0.118789"/>
+</kw>
+<status status="PASS" start="2025-04-12T21:41:19.571325" elapsed="0.118789"/>
+</kw>
+<kw name="Verify Successful Login" owner="ProductListPageResource">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-12T21:41:24.703502" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-12T21:41:19.691479" elapsed="5.012023"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-04-12T21:41:24.752718" level="INFO">Text: 'Products'</msg>
+<arg>${homeHeader}</arg>
+<arg>contains</arg>
+<arg>Products</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-04-12T21:41:24.703502" elapsed="0.058421"/>
+</kw>
+<status status="PASS" start="2025-04-12T21:41:19.690114" elapsed="5.071809"/>
+</kw>
+<msg time="2025-04-12T21:41:24.768541" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-04-12T21:41:19.400359" elapsed="5.361564"/>
+</test>
+<test id="s1-t2" name="Select Product" line="17">
+<kw name="Add Item to Cart" owner="ProductListPageResource">
+<kw name="Click" owner="Browser">
+<msg time="2025-04-12T21:41:24.785436" level="INFO">Clicks the element '#add-to-cart-sauce-labs-backpack'.</msg>
+<arg>${itemOne}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-04-12T21:41:24.784351" elapsed="0.025024"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-04-12T21:41:24.810378" level="INFO">Clicks the element '#add-to-cart-sauce-labs-bike-light'.</msg>
+<arg>${itemTwo}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-04-12T21:41:24.809375" elapsed="0.049576"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-12T21:41:27.871100" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-12T21:41:24.859949" elapsed="3.011151"/>
+</kw>
+<status status="PASS" start="2025-04-12T21:41:24.782588" elapsed="3.088512"/>
+</kw>
+<kw name="View Cart" owner="ProductListPageResource">
+<kw name="Click" owner="Browser">
+<msg time="2025-04-12T21:41:27.871100" level="INFO">Clicks the element 'css=a.shopping_cart_link'.</msg>
+<arg>${cartLink}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-04-12T21:41:27.871100" elapsed="0.060084"/>
+</kw>
+<status status="PASS" start="2025-04-12T21:41:27.871100" elapsed="0.060084"/>
+</kw>
+<kw name="Check Items Listed in Cart" owner="CartPageResource">
+<kw name="Get Elements" owner="Browser">
+<msg time="2025-04-12T21:41:27.945300" level="INFO">Found locator('div.cart_item').first(),locator('div.cart_item').nth(1) Locators successfully.</msg>
+<msg time="2025-04-12T21:41:27.945300" level="INFO">${itemsList} = ['div.cart_item &gt;&gt; nth=0', 'div.cart_item &gt;&gt; nth=1']</msg>
+<var>${itemsList}</var>
+<arg>${items}</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
+for all matched elements by ``selector``.</doc>
+<status status="PASS" start="2025-04-12T21:41:27.932316" elapsed="0.012984"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2025-04-12T21:41:27.946332" level="INFO">Length is 2.</msg>
+<msg time="2025-04-12T21:41:27.946332" level="INFO">${itemsCount} = 2</msg>
+<var>${itemsCount}</var>
+<arg>${itemsList}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2025-04-12T21:41:27.946332" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${itemsCount} &gt; 0</arg>
+<arg>Items are listed in the cart</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-04-12T21:41:27.946332" elapsed="0.000994"/>
+</kw>
+<status status="PASS" start="2025-04-12T21:41:27.931184" elapsed="0.016142"/>
+</kw>
+<msg time="2025-04-12T21:41:27.950328" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-04-12T21:41:24.768541" elapsed="3.178785"/>
+</test>
+<test id="s1-t3" name="Confirm Order" line="22">
+<kw name="Checkout Items" owner="CartPageResource">
+<kw name="Click" owner="Browser">
+<msg time="2025-04-12T21:41:27.962111" level="INFO">Clicks the element '#checkout'.</msg>
+<arg>${chkoutBtn}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-04-12T21:41:27.962111" elapsed="0.051370"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-12T21:41:31.025358" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-12T21:41:28.014469" elapsed="3.010889"/>
+</kw>
+<status status="PASS" start="2025-04-12T21:41:27.961079" elapsed="3.064279"/>
+</kw>
+<kw name="Provide User Details" owner="ChkOutPageResource">
+<kw name="Type Text" owner="Browser">
+<msg time="2025-04-12T21:41:31.025358" level="INFO">Types the text 'Test' in the given field.</msg>
+<arg>${firstName}</arg>
+<arg>${firstNameValue}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-04-12T21:41:31.025358" elapsed="0.052383"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-04-12T21:41:31.079562" level="INFO">Types the text 'Test' in the given field.</msg>
+<arg>${lastName}</arg>
+<arg>${firstNameValue}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-04-12T21:41:31.077741" elapsed="0.029620"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-04-12T21:41:31.108899" level="INFO">Types the text '12345' in the given field.</msg>
+<arg>${postalCode}</arg>
+<arg>${postalCodeValue}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-04-12T21:41:31.107361" elapsed="0.036842"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-04-12T21:41:31.144707" level="INFO">Clicks the element '#continue'.</msg>
+<arg>${continueButton}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-04-12T21:41:31.144707" elapsed="0.057336"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-12T21:41:34.209684" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-12T21:41:31.203043" elapsed="3.006641"/>
+</kw>
+<status status="PASS" start="2025-04-12T21:41:31.025358" elapsed="3.184326"/>
+</kw>
+<kw name="Confirm Order" owner="ChkOutPageResource">
+<kw name="Click" owner="Browser">
+<msg time="2025-04-12T21:41:34.209684" level="INFO">Clicks the element '#finish'.</msg>
+<arg>${finishButton}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-04-12T21:41:34.209684" elapsed="0.037922"/>
+</kw>
+<status status="PASS" start="2025-04-12T21:41:34.209684" elapsed="0.039195"/>
+</kw>
+<kw name="Verify Order Summary" owner="ChkOutPageResource">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-04-12T21:41:34.267203" level="INFO">Text: 'Thank you for your order!'</msg>
+<arg>${checkoutComplete}</arg>
+<arg>==</arg>
+<arg>${successMessage}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-04-12T21:41:34.249501" elapsed="0.017702"/>
+</kw>
+<status status="PASS" start="2025-04-12T21:41:34.249501" elapsed="0.017702"/>
+</kw>
+<msg time="2025-04-12T21:41:34.269616" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-04-12T21:41:27.955366" elapsed="6.311837"/>
+</test>
+<status status="PASS" start="2025-04-12T21:41:16.828587" elapsed="17.445481"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="PlaceOrderTC" id="s1" pass="3" fail="0" skip="0">PlaceOrderTC</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-04-12T21:41:17.058132" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+</errors>
+</robot>

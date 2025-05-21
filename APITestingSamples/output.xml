@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.9.6 on win32)" generated="2025-05-16T12:39:20.137159" rpa="false" schemaversion="5">
+<suite id="s1" name="DeleteRequestSample" source="F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\APITestingSamples\DeleteRequestSample.robot">
+<test id="s1-t1" name="Delete_Request" line="13">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-05-16T12:39:20.265780" level="INFO">Creating Session using : alias=myDelSess, url=https://reqres.in/api/users, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2025-05-16T12:39:20.265780" level="DEBUG">Creating session: myDelSess</msg>
+<arg>myDelSess</arg>
+<arg>${base_url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-05-16T12:39:20.265780" elapsed="0.000000"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-05-16T12:39:20.265780" level="INFO">&amp;{header} = { }</msg>
+<var>&amp;{header}</var>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-05-16T12:39:20.265780" elapsed="0.000000"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${header}</arg>
+<arg>Cache-Control=no-cache</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-05-16T12:39:20.265780" elapsed="0.000000"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${header}</arg>
+<arg>x-api-key=reqres-free-v1</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-05-16T12:39:20.265780" elapsed="0.000000"/>
+</kw>
+<kw name="DELETE On Session" owner="RequestsLibrary">
+<msg time="2025-05-16T12:39:20.276148" level="DEBUG">Starting new HTTPS connection (1): reqres.in:443</msg>
+<msg time="2025-05-16T12:39:20.750439" level="DEBUG">https://reqres.in:443 "DELETE /api/users/4 HTTP/1.1" 204 0</msg>
+<msg time="2025-05-16T12:39:20.750439" level="INFO">DELETE Request : url=https://reqres.in/api/users/4 
+ path_url=/api/users/4 
+ headers={'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Cache-Control': 'no-cache', 'x-api-key': 'reqres-free-v1', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg time="2025-05-16T12:39:20.750439" level="INFO">DELETE Response : url=https://reqres.in/api/users/4 
+ status=204, reason=No Content 
+ headers={'Date': 'Fri, 16 May 2025 07:11:26 GMT', 'Connection': 'keep-alive', 'Server': 'cloudflare', 'Cf-Ray': '94090f9eaf4b0d75-BOM', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1747379486&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=MDRs9XPXbBlcI3V08WmjhWImWoNQCda7cClDO0J4Klk%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1747379486&amp;sid=c4c9725f-1ab0-44d8-820f-430df2718e11&amp;s=MDRs9XPXbBlcI3V08WmjhWImWoNQCda7cClDO0J4Klk%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Ratelimit-Policy': '100;w=60', 'Ratelimit-Limit': '100', 'Ratelimit-Remaining': '98', 'Ratelimit-Reset': '60', 'Etag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'Via': '1.1 vegur', 'Cf-Cache-Status': 'DYNAMIC', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=26080&amp;min_rtt=25519&amp;rtt_var=10692&amp;sent=4&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2837&amp;recv_bytes=844&amp;delivery_rate=96770&amp;cwnd=242&amp;unsent_bytes=0&amp;cid=d4bafdb9e4cfa936&amp;ts=383&amp;x=0"'} 
+ body=None 
+ </msg>
+<msg time="2025-05-16T12:39:20.750439" level="INFO">C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg time="2025-05-16T12:39:20.753954" level="INFO">${response} = &lt;Response [204]&gt;</msg>
+<var>${response}</var>
+<arg>myDelSess</arg>
+<arg>/4</arg>
+<arg>headers=${header}</arg>
+<doc>Sends a DELETE request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-05-16T12:39:20.265780" elapsed="0.488174"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-16T12:39:20.753954" level="INFO"/>
+<arg>${response.content}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-16T12:39:20.753954" elapsed="0.000000"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<msg time="2025-05-16T12:39:20.753954" level="FAIL">InvalidResponse: 204</msg>
+<msg time="2025-05-16T12:39:20.753954" level="DEBUG">Traceback (most recent call last):
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\RequestsLibrary\RequestsKeywords.py", line 121, in status_should_be
+    self._check_status(expected_status, response, msg)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\RequestsLibrary\SessionKeywords.py", line 568, in _check_status
+    raise InvalidResponse(resp)
+RequestsLibrary.exceptions.InvalidResponse: 204</msg>
+<arg>204</arg>
+<arg>${response.status_code}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="FAIL" start="2025-05-16T12:39:20.753954" elapsed="0.000000">InvalidResponse: 204</status>
+</kw>
+<status status="FAIL" start="2025-05-16T12:39:20.265780" elapsed="0.488174">InvalidResponse: 204</status>
+</test>
+<test id="s1-t2" name="Delete a Request" line="24">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-05-16T12:39:20.766485" level="INFO">Creating Session using : alias=myDelSess, url=https://gorest.co.in/public/v2, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2025-05-16T12:39:20.766485" level="DEBUG">Creating session: myDelSess</msg>
+<arg>myDelSess</arg>
+<arg>${url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-05-16T12:39:20.765445" elapsed="0.001040"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-05-16T12:39:20.767490" level="INFO">&amp;{header} = { Authorization=Bearer b8c87e237c1c43cd079cbecef302025986abb7a48864a0b66d31b7742cda36ea }</msg>
+<var>&amp;{header}</var>
+<arg>Authorization=Bearer b8c87e237c1c43cd079cbecef302025986abb7a48864a0b66d31b7742cda36ea</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-05-16T12:39:20.767490" elapsed="0.000000"/>
+</kw>
+<kw name="DELETE On Session" owner="RequestsLibrary">
+<msg time="2025-05-16T12:39:20.770308" level="DEBUG">Starting new HTTPS connection (1): gorest.co.in:443</msg>
+<msg time="2025-05-16T12:39:21.502124" level="DEBUG">https://gorest.co.in:443 "DELETE /public/v2/users/7892610 HTTP/1.1" 404 None</msg>
+<msg time="2025-05-16T12:39:21.507523" level="INFO">DELETE Request : url=https://gorest.co.in/public/v2/users/7892610 
+ path_url=/public/v2/users/7892610 
+ headers={'User-Agent': 'python-requests/2.28.2', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer b8c87e237c1c43cd079cbecef302025986abb7a48864a0b66d31b7742cda36ea', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg time="2025-05-16T12:39:21.507523" level="INFO">DELETE Response : url=https://gorest.co.in/public/v2/users/7892610 
+ status=404, reason=Not Found 
+ headers={'Date': 'Fri, 16 May 2025 07:11:27 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'no-cache', 'Feature-Policy': "camera 'none'; gyroscope 'none'; microphone 'none'; usb 'none'; fullscreen 'self'", 'Referrer-Policy': 'strict-origin-when-cross-origin', 'Vary': 'Origin', 'X-Content-Type-Options': 'nosniff', 'X-Download-Options': 'noopen', 'X-Frame-Options': 'SAMEORIGIN', 'X-Permitted-Cross-Domain-Policies': 'none', 'X-Ratelimit-Limit': '90', 'X-Ratelimit-Remaining': '89', 'X-Ratelimit-Reset': '1', 'X-Request-Id': '2e7ef33c-8af4-43a3-870b-aa393ee5b9bb', 'X-Runtime': '0.029172', 'X-Xss-Protection': '0', 'Cf-Cache-Status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=TS1o6fjBOVv5TJHJeazZDJCKckQ8c6bNpPw34EYzSi%2BlnAkA6hbu3dndGJ3ZDFXLruShWSITy1flRr4a5ZrNXWztwJrcBbD%2BOG2FeaIXQDi826SfyiNqijXrIsrQ4WA%3D"}]}', 'Content-Encoding': 'gzip', 'Server': 'cloudflare', 'CF-RAY': '94090fa3cb4837e3-FRA', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body={"message":"Resource not found"} 
+ </msg>
+<msg time="2025-05-16T12:39:21.507523" level="INFO">C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py:1013: InsecureRequestWarning: Unverified HTTPS request is being made to host 'gorest.co.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg time="2025-05-16T12:39:21.507523" level="FAIL">HTTPError: 404 Client Error: Not Found for url: https://gorest.co.in/public/v2/users/7892610</msg>
+<msg time="2025-05-16T12:39:21.507523" level="DEBUG">Traceback (most recent call last):
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\RequestsLibrary\utils.py", line 154, in decorator
+    return func(*args, **kwargs)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\RequestsLibrary\RequestsOnSessionKeywords.py", line 144, in delete_on_session
+    self._check_status(expected_status, response, msg)
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\RequestsLibrary\SessionKeywords.py", line 570, in _check_status
+    resp.raise_for_status()
+  File "C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://gorest.co.in/public/v2/users/7892610</msg>
+<var>${response}</var>
+<arg>myDelSess</arg>
+<arg>/users/7892610</arg>
+<arg>headers=&amp;{header}</arg>
+<doc>Sends a DELETE request on a previously created HTTP Session.</doc>
+<status status="FAIL" start="2025-05-16T12:39:20.768874" elapsed="0.749161">HTTPError: 404 Client Error: Not Found for url: https://gorest.co.in/public/v2/users/7892610</status>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-05-16T12:39:21.518035" elapsed="0.000000"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>204</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="NOT RUN" start="2025-05-16T12:39:21.520932" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-05-16T12:39:20.764436" elapsed="0.758117">HTTPError: 404 Client Error: Not Found for url: https://gorest.co.in/public/v2/users/7892610</status>
+</test>
+<status status="FAIL" start="2025-05-16T12:39:20.137159" elapsed="1.391617"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="DeleteRequestSample" id="s1" pass="0" fail="2" skip="0">DeleteRequestSample</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

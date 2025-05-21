@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.9.6 on win32)" generated="2025-05-07T13:10:35.728927" rpa="false" schemaversion="5">
+<suite id="s1" name="DataDrivenTC" source="F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\dataDrivenScripts\DataDrivenTC.robot">
+<kw name="Open Browser To Login Page" owner="resource" type="SETUP">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-05-07T13:10:36.928156" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-05-07T13:10:36.929342" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "F:\\Anandhi\\workspace\\robotframework\\FirstSampleProjBrowserLib\\dataDrivenScripts\\browser\\traces\\temp\\5836dcc2-7bf3-41ee-a19f-61cead5d0856"}</msg>
+<msg time="2025-05-07T13:10:36.961294" level="INFO">Starting Browser process C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\index.js using port 50510</msg>
+<msg time="2025-05-07T13:10:36.961294" level="INFO">Node startup parameters: ['node', 'C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\Browser\\wrapper\\index.js', '50510']</msg>
+<msg time="2025-05-07T13:10:38.273539" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"F:\\Anandhi\\workspace\\robotframework\\FirstSampleProjBrowserLib\\dataDrivenScripts\\browser\\traces\\temp\\5836dcc2-7bf3-41ee-a19f-61cead5d0856"}</msg>
+<msg time="2025-05-07T13:10:38.275533" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-05-07T13:10:38.303595" level="INFO">Successfully created context. </msg>
+<msg time="2025-05-07T13:10:38.303595" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<msg time="2025-05-07T13:10:41.861708" level="INFO">Successfully initialized new page object and opened url: https://the-internet.herokuapp.com/login</msg>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-05-07T13:10:36.927141" elapsed="4.934567"/>
+</kw>
+<status status="PASS" start="2025-05-07T13:10:36.925633" elapsed="4.937554"/>
+</kw>
+<test id="s1-t1" name=" Login with user testuser1 and password SuperSecretPassword!" line="16">
+<msg time="2025-05-07T13:10:41.878262" level="INFO">${DataDriver_TEST_DATA} = {'test_case_name': ' Login with user testuser1 and password SuperSecretPassword!', 'arguments': {'${username}': 'testuser1', '${password}': 'SuperSecretPassword!'}, 'tags': None, 'documentation': None...</msg>
+<kw name="Invalid Login">
+<kw name="Input Username" owner="resource">
+<kw name="Type Text" owner="Browser">
+<msg time="2025-05-07T13:10:41.880399" level="INFO">Types the text 'testuser1' in the given field.</msg>
+<arg>\#username</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-05-07T13:10:41.880399" elapsed="0.078621"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2025-05-07T13:10:41.879892" elapsed="0.080230"/>
+</kw>
+<kw name="Input Password" owner="resource">
+<kw name="Type Text" owner="Browser">
+<msg time="2025-05-07T13:10:41.961434" level="INFO">Types the text 'SuperSecretPassword!' in the given field.</msg>
+<arg>\#password</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-05-07T13:10:41.961434" elapsed="0.042871"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2025-05-07T13:10:41.960122" elapsed="0.044183"/>
+</kw>
+<kw name="Submit Credentials" owner="resource">
+<kw name="Click" owner="Browser">
+<msg time="2025-05-07T13:10:42.006438" level="INFO">Clicks the element 'button.radius'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-07T13:10:42.005302" elapsed="0.518200"/>
+</kw>
+<status status="PASS" start="2025-05-07T13:10:42.005302" elapsed="0.518200"/>
+</kw>
+<kw name="Login Should Have Failed" owner="resource">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-05-07T13:10:42.587314" level="INFO">Text: ' Your username is invalid!\n×'</msg>
+<arg>\#flash</arg>
+<arg>*=</arg>
+<arg>${errMsg}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-07T13:10:42.525106" elapsed="0.062208"/>
+</kw>
+<arg>${errMsg}</arg>
+<status status="PASS" start="2025-05-07T13:10:42.523502" elapsed="0.064342"/>
+</kw>
+<arg>username=testuser1</arg>
+<arg>password=SuperSecretPassword!</arg>
+<status status="PASS" start="2025-05-07T13:10:41.879387" elapsed="0.708457"/>
+</kw>
+<msg time="2025-05-07T13:10:42.592221" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-05-07T13:10:41.863187" elapsed="0.724657"/>
+</test>
+<test id="s1-t2" name=" Login with user tomsmith and password welcome123" line="16">
+<msg time="2025-05-07T13:10:42.606885" level="INFO">${DataDriver_TEST_DATA} = {'test_case_name': ' Login with user tomsmith and password welcome123', 'arguments': {'${username}': 'tomsmith', '${password}': 'welcome123'}, 'tags': None, 'documentation': None}</msg>
+<kw name="Invalid Login">
+<kw name="Input Username" owner="resource">
+<kw name="Type Text" owner="Browser">
+<msg time="2025-05-07T13:10:42.610296" level="INFO">Types the text 'tomsmith' in the given field.</msg>
+<arg>\#username</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-05-07T13:10:42.609081" elapsed="0.051952"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2025-05-07T13:10:42.608391" elapsed="0.052642"/>
+</kw>
+<kw name="Input Password" owner="resource">
+<kw name="Type Text" owner="Browser">
+<msg time="2025-05-07T13:10:42.662554" level="INFO">Types the text 'welcome123' in the given field.</msg>
+<arg>\#password</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-05-07T13:10:42.662039" elapsed="0.035082"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2025-05-07T13:10:42.661033" elapsed="0.036088"/>
+</kw>
+<kw name="Submit Credentials" owner="resource">
+<kw name="Click" owner="Browser">
+<msg time="2025-05-07T13:10:42.698883" level="INFO">Clicks the element 'button.radius'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-07T13:10:42.698148" elapsed="0.543350"/>
+</kw>
+<status status="PASS" start="2025-05-07T13:10:42.697121" elapsed="0.544377"/>
+</kw>
+<kw name="Login Should Have Failed" owner="resource">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-05-07T13:10:43.295200" level="INFO">Text: ' Your password is invalid!\n×'</msg>
+<arg>\#flash</arg>
+<arg>*=</arg>
+<arg>${errMsg}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-07T13:10:43.242976" elapsed="0.052224"/>
+</kw>
+<arg>${errMsg}</arg>
+<status status="PASS" start="2025-05-07T13:10:43.241498" elapsed="0.053702"/>
+</kw>
+<arg>username=tomsmith</arg>
+<arg>password=welcome123</arg>
+<status status="PASS" start="2025-05-07T13:10:42.607391" elapsed="0.687809"/>
+</kw>
+<msg time="2025-05-07T13:10:43.300108" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-05-07T13:10:42.600895" elapsed="0.695308"/>
+</test>
+<test id="s1-t3" name=" Login with user testuser1 and password welcome" line="16">
+<msg time="2025-05-07T13:10:43.311880" level="INFO">${DataDriver_TEST_DATA} = {'test_case_name': ' Login with user testuser1 and password welcome', 'arguments': {'${username}': 'testuser1', '${password}': 'welcome'}, 'tags': None, 'documentation': None}</msg>
+<kw name="Invalid Login">
+<kw name="Input Username" owner="resource">
+<kw name="Type Text" owner="Browser">
+<msg time="2025-05-07T13:10:43.317174" level="INFO">Types the text 'testuser1' in the given field.</msg>
+<arg>\#username</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-05-07T13:10:43.314873" elapsed="0.054213"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2025-05-07T13:10:43.312873" elapsed="0.056213"/>
+</kw>
+<kw name="Input Password" owner="resource">
+<kw name="Type Text" owner="Browser">
+<msg time="2025-05-07T13:10:43.370093" level="INFO">Types the text 'welcome' in the given field.</msg>
+<arg>\#password</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-05-07T13:10:43.370093" elapsed="0.027459"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2025-05-07T13:10:43.369086" elapsed="0.029536"/>
+</kw>
+<kw name="Submit Credentials" owner="resource">
+<kw name="Click" owner="Browser">
+<msg time="2025-05-07T13:10:43.400391" level="INFO">Clicks the element 'button.radius'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-07T13:10:43.399368" elapsed="0.533690"/>
+</kw>
+<status status="PASS" start="2025-05-07T13:10:43.398622" elapsed="0.535719"/>
+</kw>
+<kw name="Login Should Have Failed" owner="resource">
+<kw name="Get Text" owner="Browser">
+<msg time="2025-05-07T13:10:43.985274" level="INFO">Text: ' Your username is invalid!\n×'</msg>
+<arg>\#flash</arg>
+<arg>*=</arg>
+<arg>${errMsg}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-07T13:10:43.934341" elapsed="0.051932"/>
+</kw>
+<arg>${errMsg}</arg>
+<status status="PASS" start="2025-05-07T13:10:43.934341" elapsed="0.051992"/>
+</kw>
+<arg>username=testuser1</arg>
+<arg>password=welcome</arg>
+<status status="PASS" start="2025-05-07T13:10:43.311880" elapsed="0.674453"/>
+</kw>
+<msg time="2025-05-07T13:10:43.988869" level="INFO">Set timeout to: 10000</msg>
+<status status="PASS" start="2025-05-07T13:10:43.304328" elapsed="0.682511"/>
+</test>
+<status status="PASS" start="2025-05-07T13:10:35.731038" elapsed="8.262822"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="DataDrivenTC" id="s1" pass="3" fail="0" skip="0">DataDrivenTC</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-07T13:10:36.928156" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+</errors>
+</robot>

@@ -1,0 +1,6 @@
+datasources:7f56324f969a16ed3a90edf7c903a33b1c97a3a1
+commandlineoptions:97d170e1550eee4afc0af065b78cda302a97674c
+suitesfrom:no-suites-from-option
+file:250c26b4ce84cd061b205ec2cacb25572a5ac47e
+--suite parallelTests.AlertTC
+--suite parallelTests.gherkn loginTC

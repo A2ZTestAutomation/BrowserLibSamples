@@ -1,0 +1,2 @@
+cd F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib
+pabot parallelTests

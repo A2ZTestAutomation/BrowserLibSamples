@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.9.6 on win32)" generated="2025-05-08T12:42:42.739531" rpa="false" schemaversion="5">
+<suite id="s1" name="FileMgmtTest &amp; FileOpsTest">
+<suite id="s1-s1" name="FileMgmtTest" source="F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\FileMgmtTest.robot">
+<test id="s1-s1-t1" name="Create some Directories" line="6">
+<kw name="Create a base dir" owner="os">
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2025-05-08T12:42:42.791907" level="INFO" html="true">Directory '&lt;a href="file://F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory"&gt;F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory&lt;/a&gt;' already exists.</msg>
+<arg>${outputDir}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.791907" elapsed="0.001081"/>
+</kw>
+<kw name="Should Exist" owner="OperatingSystem">
+<msg time="2025-05-08T12:42:42.792988" level="INFO" html="true">Path '&lt;a href="file://F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory"&gt;F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory&lt;/a&gt;' exists.</msg>
+<arg>${outputDir}</arg>
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.792988" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-05-08T12:42:42.790905" elapsed="0.002589"/>
+</kw>
+<kw name="Create source directory" owner="os">
+<kw name="Join Path" owner="OperatingSystem">
+<msg time="2025-05-08T12:42:42.793494" level="INFO">${directoryPath} = outputDirectory\fromDirectory</msg>
+<var>${directoryPath}</var>
+<arg>${outputDir}</arg>
+<arg>${DirtOne}</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.793494" elapsed="0.000000"/>
+</kw>
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2025-05-08T12:42:42.794525" level="INFO" html="true">Directory '&lt;a href="file://F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\fromDirectory"&gt;F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\fromDirectory&lt;/a&gt;' already exists.</msg>
+<arg>${directoryPath}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.794525" elapsed="0.000000"/>
+</kw>
+<kw name="Should Exist" owner="OperatingSystem">
+<msg time="2025-05-08T12:42:42.794525" level="INFO" html="true">Path '&lt;a href="file://F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\fromDirectory"&gt;F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\fromDirectory&lt;/a&gt;' exists.</msg>
+<arg>${directoryPath}</arg>
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.794525" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-05-08T12:42:42.793494" elapsed="0.001031"/>
+</kw>
+<kw name="Create dest directory" owner="os">
+<kw name="Join Path" owner="OperatingSystem">
+<msg time="2025-05-08T12:42:42.795492" level="INFO">${directoryPath} = outputDirectory\toDirectory</msg>
+<var>${directoryPath}</var>
+<arg>${outputDir}</arg>
+<arg>${DirtTwo}</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.795492" elapsed="0.000000"/>
+</kw>
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2025-05-08T12:42:42.796491" level="INFO" html="true">Directory '&lt;a href="file://F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\toDirectory"&gt;F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\toDirectory&lt;/a&gt;' already exists.</msg>
+<arg>${directoryPath}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.796491" elapsed="0.000000"/>
+</kw>
+<kw name="Should Exist" owner="OperatingSystem">
+<msg time="2025-05-08T12:42:42.796491" level="INFO" html="true">Path '&lt;a href="file://F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\toDirectory"&gt;F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\toDirectory&lt;/a&gt;' exists.</msg>
+<arg>${directoryPath}</arg>
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.796491" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-05-08T12:42:42.795492" elapsed="0.002027"/>
+</kw>
+<tag>DirTest</tag>
+<status status="PASS" start="2025-05-08T12:42:42.789511" elapsed="0.008008"/>
+</test>
+<test id="s1-s1-t2" name="Create some Files" line="12">
+<kw name="Create File1" owner="os">
+<kw name="Join Path" owner="OperatingSystem">
+<msg time="2025-05-08T12:42:42.799550" level="INFO">${filePath} = outputDirectory\fromDirectory\index1.html</msg>
+<var>${filePath}</var>
+<arg>${outputDir}</arg>
+<arg>${DirtOne}</arg>
+<arg>${file1}</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.799550" elapsed="0.000000"/>
+</kw>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2025-05-08T12:42:42.800552" level="INFO" html="true">Created file '&lt;a href="file://F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\fromDirectory\index1.html"&gt;F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\fromDirectory\index1.html&lt;/a&gt;'.</msg>
+<arg>${filePath}</arg>
+<arg>&lt;h1&gt;Content of file1&lt;/h1&gt;</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.800552" elapsed="0.000000"/>
+</kw>
+<kw name="Should Exist" owner="OperatingSystem">
+<msg time="2025-05-08T12:42:42.801553" level="INFO" html="true">Path '&lt;a href="file://F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\fromDirectory\index1.html"&gt;F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\fromDirectory\index1.html&lt;/a&gt;' exists.</msg>
+<arg>${filePath}</arg>
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.801553" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-05-08T12:42:42.799550" elapsed="0.002003"/>
+</kw>
+<kw name="Create File2" owner="os">
+<kw name="Join Path" owner="OperatingSystem">
+<msg time="2025-05-08T12:42:42.802499" level="INFO">${filePath} = outputDirectory\toDirectory\index2.html</msg>
+<var>${filePath}</var>
+<arg>${outputDir}</arg>
+<arg>${DirtTwo}</arg>
+<arg>${file2}</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.802499" elapsed="0.000000"/>
+</kw>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2025-05-08T12:42:42.803500" level="INFO" html="true">Created file '&lt;a href="file://F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\toDirectory\index2.html"&gt;F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\toDirectory\index2.html&lt;/a&gt;'.</msg>
+<arg>${filePath}</arg>
+<arg>&lt;h1&gt;Content of file1&lt;/h1&gt;</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.802499" elapsed="0.001001"/>
+</kw>
+<kw name="Should Exist" owner="OperatingSystem">
+<msg time="2025-05-08T12:42:42.803500" level="INFO" html="true">Path '&lt;a href="file://F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\toDirectory\index2.html"&gt;F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\toDirectory\index2.html&lt;/a&gt;' exists.</msg>
+<arg>${filePath}</arg>
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.803500" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-05-08T12:42:42.802190" elapsed="0.001310"/>
+</kw>
+<kw name="Create File3" owner="os">
+<kw name="Join Path" owner="OperatingSystem">
+<msg time="2025-05-08T12:42:42.804502" level="INFO">${filePath} = outputDirectory\toDirectory\index3.html</msg>
+<var>${filePath}</var>
+<arg>${outputDir}</arg>
+<arg>${DirtTwo}</arg>
+<arg>${file3}</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.804502" elapsed="0.000000"/>
+</kw>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2025-05-08T12:42:42.805760" level="INFO" html="true">Created file '&lt;a href="file://F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\toDirectory\index3.html"&gt;F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\toDirectory\index3.html&lt;/a&gt;'.</msg>
+<arg>${filePath}</arg>
+<arg>&lt;h1&gt;Content of file1&lt;/h1&gt;</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.804502" elapsed="0.001258"/>
+</kw>
+<kw name="Should Exist" owner="OperatingSystem">
+<msg time="2025-05-08T12:42:42.806819" level="INFO" html="true">Path '&lt;a href="file://F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\toDirectory\index3.html"&gt;F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\toDirectory\index3.html&lt;/a&gt;' exists.</msg>
+<arg>${filePath}</arg>
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.805760" elapsed="0.001059"/>
+</kw>
+<status status="PASS" start="2025-05-08T12:42:42.804502" elapsed="0.002317"/>
+</kw>
+<tag>FileTest</tag>
+<status status="PASS" start="2025-05-08T12:42:42.798484" elapsed="0.008677"/>
+</test>
+<test id="s1-s1-t3" name="FileManagement" line="18">
+<kw name="Move File3 from DirtOne to DirtTwo" owner="os">
+<kw name="Join Path" owner="OperatingSystem">
+<msg time="2025-05-08T12:42:42.808668" level="INFO">${sourcePath} = outputDirectory\toDirectory\index3.html</msg>
+<var>${sourcePath}</var>
+<arg>${outputDir}</arg>
+<arg>${DirtTwo}</arg>
+<arg>${file3}</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.808668" elapsed="0.000000"/>
+</kw>
+<kw name="Join Path" owner="OperatingSystem">
+<msg time="2025-05-08T12:42:42.809674" level="INFO">${targetPath} = outputDirectory\fromDirectory\index3.html</msg>
+<var>${targetPath}</var>
+<arg>${outputDir}</arg>
+<arg>${DirtOne}</arg>
+<arg>${file3}</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.808668" elapsed="0.001006"/>
+</kw>
+<kw name="Move File" owner="OperatingSystem">
+<msg time="2025-05-08T12:42:42.813701" level="INFO" html="true">Moved file from '&lt;a href="file://F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\toDirectory\index3.html"&gt;F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\toDirectory\index3.html&lt;/a&gt;' to '&lt;a href="file://F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\fromDirectory\index3.html"&gt;F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\fromDirectory\index3.html&lt;/a&gt;'.</msg>
+<arg>${sourcePath}</arg>
+<arg>${targetPath}</arg>
+<doc>Moves the source file into the destination.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.809674" elapsed="0.004027"/>
+</kw>
+<kw name="Should Exist" owner="OperatingSystem">
+<msg time="2025-05-08T12:42:42.813701" level="INFO" html="true">Path '&lt;a href="file://F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\fromDirectory\index3.html"&gt;F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\fromDirectory\index3.html&lt;/a&gt;' exists.</msg>
+<arg>${targetPath}</arg>
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.813701" elapsed="0.000000"/>
+</kw>
+<kw name="Should Not Exist" owner="OperatingSystem">
+<msg time="2025-05-08T12:42:42.814698" level="INFO" html="true">Path '&lt;a href="file://F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\toDirectory\index3.html"&gt;F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\toDirectory\index3.html&lt;/a&gt;' does not exist.</msg>
+<arg>${sourcePath}</arg>
+<doc>Fails if the given path (file or directory) exists.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.814698" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-05-08T12:42:42.808668" elapsed="0.006030"/>
+</kw>
+<kw name="copy File1 from DirtOne to DirtTwo" owner="os">
+<kw name="Join Path" owner="OperatingSystem">
+<msg time="2025-05-08T12:42:42.816002" level="INFO">${sourcePath} = outputDirectory\fromDirectory\index1.html</msg>
+<var>${sourcePath}</var>
+<arg>${outputDir}</arg>
+<arg>${DirtOne}</arg>
+<arg>${file1}</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.816002" elapsed="0.000000"/>
+</kw>
+<kw name="Join Path" owner="OperatingSystem">
+<msg time="2025-05-08T12:42:42.817042" level="INFO">${targetPath} = outputDirectory\toDirectory\index1.html</msg>
+<var>${targetPath}</var>
+<arg>${outputDir}</arg>
+<arg>${DirtTwo}</arg>
+<arg>${file1}</arg>
+<doc>Joins the given path part(s) to the given base path.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.816002" elapsed="0.001040"/>
+</kw>
+<kw name="Copy File" owner="OperatingSystem">
+<msg time="2025-05-08T12:42:42.820997" level="INFO" html="true">Copied file from '&lt;a href="file://F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\fromDirectory\index1.html"&gt;F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\fromDirectory\index1.html&lt;/a&gt;' to '&lt;a href="file://F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\toDirectory\index1.html"&gt;F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\toDirectory\index1.html&lt;/a&gt;'.</msg>
+<arg>${sourcePath}</arg>
+<arg>${targetPath}</arg>
+<doc>Copies the source file into the destination.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.817042" elapsed="0.003955"/>
+</kw>
+<kw name="Should Exist" owner="OperatingSystem">
+<msg time="2025-05-08T12:42:42.820997" level="INFO" html="true">Path '&lt;a href="file://F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\fromDirectory\index1.html"&gt;F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\fromDirectory\index1.html&lt;/a&gt;' exists.</msg>
+<arg>${sourcePath}</arg>
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.820997" elapsed="0.000000"/>
+</kw>
+<kw name="Should Exist" owner="OperatingSystem">
+<msg time="2025-05-08T12:42:42.822488" level="INFO" html="true">Path '&lt;a href="file://F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\toDirectory\index1.html"&gt;F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\outputDirectory\toDirectory\index1.html&lt;/a&gt;' exists.</msg>
+<arg>${targetPath}</arg>
+<doc>Fails unless the given path (file or directory) exists.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.822488" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-05-08T12:42:42.814698" elapsed="0.008991"/>
+</kw>
+<tag>FileMgmt</tag>
+<status status="PASS" start="2025-05-08T12:42:42.807161" elapsed="0.016528"/>
+</test>
+<status status="PASS" start="2025-05-08T12:42:42.771189" elapsed="0.053688"/>
+</suite>
+<suite id="s1-s2" name="FileOpsTest" source="F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\FileOpsTest.robot">
+<test id="s1-s2-t1" name="Reading from Text File" line="12">
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2025-05-08T12:42:42.944559" level="INFO" html="true">Getting file '&lt;a href="file://F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\output.txt"&gt;F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\output.txt&lt;/a&gt;'.</msg>
+<msg time="2025-05-08T12:42:42.944559" level="INFO">${str} = This job is successfully completed. </msg>
+<var>${str}</var>
+<arg>F:\\Anandhi\\workspace\\robotframework\\FirstSampleProjBrowserLib\\OperSysSamples/output.txt</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.944559" elapsed="0.000000"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${str}</arg>
+<arg>successfully completed</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.945875" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-05-08T12:42:42.944153" elapsed="0.001722"/>
+</test>
+<test id="s1-s2-t2" name="Reading data from csv File" line="17">
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2025-05-08T12:42:42.947870" level="INFO" html="true">Getting file '&lt;a href="file://F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\inputData.csv"&gt;F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples\inputData.csv&lt;/a&gt;'.</msg>
+<msg time="2025-05-08T12:42:42.947870" level="INFO">${FILE_CONTENT} = # ID, Text, Value
+10, First Item, 300
+20, Second Item, 200
+30, Third Item, 100</msg>
+<var>${FILE_CONTENT}</var>
+<arg>F:\\Anandhi\\workspace\\robotframework\\FirstSampleProjBrowserLib\\OperSysSamples/inputData.csv</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.946873" elapsed="0.000997"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-08T12:42:42.948375" level="INFO">File Content: # ID, Text, Value
+10, First Item, 300
+20, Second Item, 200
+30, Third Item, 100</msg>
+<arg>File Content: ${FILE_CONTENT}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.948375" elapsed="0.000000"/>
+</kw>
+<kw name="Split to Lines and Remove Header">
+<kw name="Split To Lines" owner="String">
+<msg time="2025-05-08T12:42:42.949383" level="INFO">4 lines returned</msg>
+<msg time="2025-05-08T12:42:42.949383" level="INFO">@{LINES} = [ # ID, Text, Value | 10, First Item, 300 | 20, Second Item, 200 | 30, Third Item, 100 ]</msg>
+<var>@{LINES}</var>
+<arg>${FILE_CONTENT}</arg>
+<doc>Splits the given string to lines.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.949383" elapsed="0.000000"/>
+</kw>
+<kw name="Remove From List" owner="Collections">
+<arg>${LINES}</arg>
+<arg>0</arg>
+<doc>Removes and returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.949383" elapsed="0.000000"/>
+</kw>
+<return>
+<value>@{LINES}</value>
+<status status="PASS" start="2025-05-08T12:42:42.949383" elapsed="0.000000"/>
+</return>
+<msg time="2025-05-08T12:42:42.949383" level="INFO">@{LINES} = [ 10, First Item, 300 | 20, Second Item, 200 | 30, Third Item, 100 ]</msg>
+<var>@{LINES}</var>
+<arg>${FILE_CONTENT}</arg>
+<status status="PASS" start="2025-05-08T12:42:42.948375" elapsed="0.001008"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-08T12:42:42.950806" level="INFO">['10, First Item, 300', '20, Second Item, 200', '30, Third Item, 100']</msg>
+<arg>${LINES}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.949383" elapsed="0.001423"/>
+</kw>
+<kw name="Calculate Sum From List">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-05-08T12:42:42.951935" level="INFO">${RESULT} = 0</msg>
+<var>${RESULT}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.950806" elapsed="0.001129"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-08T12:42:42.952439" level="INFO">10, First Item, 300</msg>
+<arg>${LINE}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.951935" elapsed="0.000504"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2025-05-08T12:42:42.952942" level="INFO">@{COLUMNS} = [ 10 |  First Item |  300 ]</msg>
+<var>@{COLUMNS}</var>
+<arg>${LINE}</arg>
+<arg>separator=,</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.952439" elapsed="0.000503"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-05-08T12:42:42.952942" level="INFO">${VALUE} =  300</msg>
+<var>${VALUE}</var>
+<arg>${COLUMNS}</arg>
+<arg>2</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.952942" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-08T12:42:42.952942" level="INFO"> 300</msg>
+<arg>${VALUE}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.952942" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-05-08T12:42:42.953953" level="INFO">${RESULT} = 300</msg>
+<var>${RESULT}</var>
+<arg>${RESULT}+${VALUE}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.953953" elapsed="0.000000"/>
+</kw>
+<var name="${LINE}">10, First Item, 300</var>
+<status status="PASS" start="2025-05-08T12:42:42.951935" elapsed="0.002018"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-08T12:42:42.953953" level="INFO">20, Second Item, 200</msg>
+<arg>${LINE}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.953953" elapsed="0.000000"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2025-05-08T12:42:42.954939" level="INFO">@{COLUMNS} = [ 20 |  Second Item |  200 ]</msg>
+<var>@{COLUMNS}</var>
+<arg>${LINE}</arg>
+<arg>separator=,</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.954939" elapsed="0.000000"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-05-08T12:42:42.954939" level="INFO">${VALUE} =  200</msg>
+<var>${VALUE}</var>
+<arg>${COLUMNS}</arg>
+<arg>2</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.954939" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-08T12:42:42.955936" level="INFO"> 200</msg>
+<arg>${VALUE}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.954939" elapsed="0.000997"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-05-08T12:42:42.955936" level="INFO">${RESULT} = 500</msg>
+<var>${RESULT}</var>
+<arg>${RESULT}+${VALUE}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.955936" elapsed="0.000000"/>
+</kw>
+<var name="${LINE}">20, Second Item, 200</var>
+<status status="PASS" start="2025-05-08T12:42:42.953953" elapsed="0.001983"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-08T12:42:42.956965" level="INFO">30, Third Item, 100</msg>
+<arg>${LINE}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.955936" elapsed="0.001029"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2025-05-08T12:42:42.956965" level="INFO">@{COLUMNS} = [ 30 |  Third Item |  100 ]</msg>
+<var>@{COLUMNS}</var>
+<arg>${LINE}</arg>
+<arg>separator=,</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.956965" elapsed="0.000000"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-05-08T12:42:42.956965" level="INFO">${VALUE} =  100</msg>
+<var>${VALUE}</var>
+<arg>${COLUMNS}</arg>
+<arg>2</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.956965" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-08T12:42:42.956965" level="INFO"> 100</msg>
+<arg>${VALUE}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.956965" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-05-08T12:42:42.958504" level="INFO">${RESULT} = 600</msg>
+<var>${RESULT}</var>
+<arg>${RESULT}+${VALUE}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.956965" elapsed="0.001539"/>
+</kw>
+<var name="${LINE}">30, Third Item, 100</var>
+<status status="PASS" start="2025-05-08T12:42:42.955936" elapsed="0.002568"/>
+</iter>
+<var>${LINE}</var>
+<value>@{LIST}</value>
+<status status="PASS" start="2025-05-08T12:42:42.951935" elapsed="0.006569"/>
+</for>
+<return>
+<value>${RESULT}</value>
+<status status="PASS" start="2025-05-08T12:42:42.958504" elapsed="0.000000"/>
+</return>
+<msg time="2025-05-08T12:42:42.958504" level="INFO">${RESULT} = 600</msg>
+<var>${RESULT}</var>
+<arg>${LINES}</arg>
+<status status="PASS" start="2025-05-08T12:42:42.950806" elapsed="0.007698"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-08T12:42:42.959512" level="INFO">600</msg>
+<arg>${RESULT}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.958504" elapsed="0.001008"/>
+</kw>
+<status status="PASS" start="2025-05-08T12:42:42.946873" elapsed="0.012639"/>
+</test>
+<test id="s1-s2-t3" name="Create Employee Json File" line="47">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-05-08T12:42:42.962048" level="INFO">${jsonFile} = F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples/employee.json</msg>
+<var>${jsonFile}</var>
+<arg>F:\\Anandhi\\workspace\\robotframework\\FirstSampleProjBrowserLib\\OperSysSamples/employee.json</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.962048" elapsed="0.000000"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-05-08T12:42:42.962553" level="INFO">${jsonData} = {}</msg>
+<var>${jsonData}</var>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.962553" elapsed="0.000000"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${jsonData}</arg>
+<arg>id=101</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.962553" elapsed="0.000000"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${jsonData}</arg>
+<arg>name=Alice Britto</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.962553" elapsed="0.000000"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${jsonData}</arg>
+<arg>department=Engineering</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.963993" elapsed="0.000000"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${jsonData}</arg>
+<arg>role=Software Developer</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.963993" elapsed="0.000000"/>
+</kw>
+<kw name="Set To Dictionary" owner="Collections">
+<arg>${jsonData}</arg>
+<arg>salary=75000</arg>
+<doc>Adds the given ``key_value_pairs`` and/or ``items`` to the ``dictionary``.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.965000" elapsed="0.000000"/>
+</kw>
+<kw name="Dump Json To File" owner="JSONLibrary">
+<arg>${jsonFile}</arg>
+<arg>${jsonData}</arg>
+<doc>Dump JSON to file</doc>
+<status status="PASS" start="2025-05-08T12:42:42.965000" elapsed="0.001431"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-08T12:42:42.967445" level="INFO">Employee JSON file created at: F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\OperSysSamples/employee.json</msg>
+<arg>Employee JSON file created at: ${jsonFile}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-08T12:42:42.966431" elapsed="0.001014"/>
+</kw>
+<kw name="Update Value To Json" owner="JSONLibrary">
+<msg time="2025-05-08T12:42:42.992925" level="INFO">${updatedJsonData} = {'id': '101', 'name': 'Alice Britto', 'department': 'Engineering', 'role': 'Software Developer', 'salary': '90000'}</msg>
+<var>${updatedJsonData}</var>
+<arg>${jsonData}</arg>
+<arg>salary</arg>
+<arg>90000</arg>
+<doc>Update value to JSON using JSONPath</doc>
+<status status="PASS" start="2025-05-08T12:42:42.967788" elapsed="0.025137"/>
+</kw>
+<kw name="Dump Json To File" owner="JSONLibrary">
+<arg>${jsonFile}</arg>
+<arg>${updatedJsonData}</arg>
+<doc>Dump JSON to file</doc>
+<status status="PASS" start="2025-05-08T12:42:42.992925" elapsed="0.000996"/>
+</kw>
+<kw name="Should Have Value In Json" owner="JSONLibrary">
+<arg>${updatedJsonData}</arg>
+<arg>department</arg>
+<doc>Should Have Value In JSON using JSONPath</doc>
+<status status="PASS" start="2025-05-08T12:42:42.994917" elapsed="0.021440"/>
+</kw>
+<status status="PASS" start="2025-05-08T12:42:42.960846" elapsed="0.056474"/>
+</test>
+<status status="PASS" start="2025-05-08T12:42:42.825700" elapsed="0.193122"/>
+</suite>
+<status status="PASS" start="2025-05-08T12:42:42.741973" elapsed="0.277185"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">DirTest</stat>
+<stat pass="1" fail="0" skip="0">FileMgmt</stat>
+<stat pass="1" fail="0" skip="0">FileTest</stat>
+</tag>
+<suite>
+<stat name="FileMgmtTest &amp; FileOpsTest" id="s1" pass="6" fail="0" skip="0">FileMgmtTest &amp; FileOpsTest</stat>
+<stat name="FileMgmtTest" id="s1-s1" pass="3" fail="0" skip="0">FileMgmtTest &amp; FileOpsTest.FileMgmtTest</stat>
+<stat name="FileOpsTest" id="s1-s2" pass="3" fail="0" skip="0">FileMgmtTest &amp; FileOpsTest.FileOpsTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

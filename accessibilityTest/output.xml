@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.9.6 on win32)" generated="2025-05-08T21:33:28.552445" rpa="false" schemaversion="5">
+<suite id="s1" name="SampleAllyTest" source="F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\accessibilityTest\SampleAllyTest.robot">
+<test id="s1-t1" name="Google Accessibility Test" line="9">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-08T21:33:28.768837" level="INFO">Opening browser 'chrome' to base url 'https://robotframework.org/'.</msg>
+<msg time="2025-05-08T21:33:28.790125" level="INFO">Executing: C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json</msg>
+<msg time="2025-05-08T21:33:30.454178" level="WARN">Unable to obtain driver using Selenium Manager: Selenium Manager failed for: C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json.
+The chromedriver version cannot be discovered</msg>
+<msg time="2025-05-08T21:33:30.456198" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-05-08T21:33:30.456198" level="FAIL">SeleniumManagerException: Message: Selenium Manager failed for: C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json.
+The chromedriver version cannot be discovered
+</msg>
+<arg>https://robotframework.org/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-05-08T21:33:28.768837" elapsed="1.687361">SeleniumManagerException: Message: Selenium Manager failed for: C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json.
+The chromedriver version cannot be discovered
+</status>
+</kw>
+<kw name="Run Accessibility Tests" owner="AxeLibrary">
+<var>${results.violations}</var>
+<arg>result_file.json</arg>
+<doc>Executes accessibility tests in current page by injecting axe-core javascript and write results into `result_file` (json). Return result statisitics</doc>
+<status status="NOT RUN" start="2025-05-08T21:33:30.456198" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Violations Count: ${results.violations}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-05-08T21:33:30.456198" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-05-08T21:33:28.768837" elapsed="1.687361">SeleniumManagerException: Message: Selenium Manager failed for: C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json.
+The chromedriver version cannot be discovered
+</status>
+</test>
+<status status="FAIL" start="2025-05-08T21:33:28.552445" elapsed="1.910552"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="SampleAllyTest" id="s1" pass="0" fail="1" skip="0">SampleAllyTest</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-08T21:33:30.454178" level="WARN">Unable to obtain driver using Selenium Manager: Selenium Manager failed for: C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json.
+The chromedriver version cannot be discovered</msg>
+</errors>
+</robot>

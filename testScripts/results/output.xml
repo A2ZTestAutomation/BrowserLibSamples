@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.9.6 on win32)" generated="2025-03-13T17:29:20.768360" rpa="false" schemaversion="5">
+<suite id="s1" name="VariableSample" source="F:\Anandhi\workspace\robotframework\FirstSampleProjBrowserLib\testScripts\VariableSample.robot">
+<test id="s1-t1" name="Using Scalar Variable Values" line="13">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-03-13T17:29:20.990083" level="INFO">http://dev.demo.com</msg>
+<arg>${URL.${env}}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-03-13T17:29:20.986577" elapsed="0.003506"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-03-13T17:29:20.990957" level="INFO">This chromium session has delay time of 5 Seconds</msg>
+<arg>This ${BROWSER} session has delay time of ${DELAY} Seconds</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-03-13T17:29:20.990083" elapsed="0.000874"/>
+</kw>
+<msg time="2025-03-13T17:29:21.024181" level="INFO">Starting Browser process C:\Users\DELL\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\index.js using port 65016</msg>
+<msg time="2025-03-13T17:29:21.024181" level="INFO">Node startup parameters: ['node', 'C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\Browser\\wrapper\\index.js', '65016']</msg>
+<status status="PASS" start="2025-03-13T17:29:20.986577" elapsed="0.004380"/>
+</test>
+<test id="s1-t2" name="Using List" line="18">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-03-13T17:29:22.169640" level="INFO">@{userDetail} = [ John | Peter | aaa@gmail.com | 9778655 ]</msg>
+<var>@{userDetail}</var>
+<arg>John</arg>
+<arg>Peter</arg>
+<arg>aaa@gmail.com</arg>
+<arg>9778655</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-03-13T17:29:22.168594" elapsed="0.001046"/>
+</kw>
+<kw name="Log Many" owner="BuiltIn">
+<msg time="2025-03-13T17:29:22.170144" level="INFO">John</msg>
+<msg time="2025-03-13T17:29:22.170144" level="INFO">Peter</msg>
+<msg time="2025-03-13T17:29:22.170144" level="INFO">aaa@gmail.com</msg>
+<msg time="2025-03-13T17:29:22.170144" level="INFO">9778655</msg>
+<arg>@{userDetail}</arg>
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<status status="PASS" start="2025-03-13T17:29:22.170144" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-03-13T17:29:22.170144" level="INFO">"First Name : ",Peter</msg>
+<arg>"First Name : ",${userDetail}[1]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-03-13T17:29:22.170144" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-03-13T17:29:22.170144" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-03-13T17:29:22.170144" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "F:\\Anandhi\\workspace\\robotframework\\FirstSampleProjBrowserLib\\testScripts\\results\\browser\\traces\\temp\\cbbd7bea-65e1-4b25-acce-41b3c4540be5"}</msg>
+<msg time="2025-03-13T17:29:22.409796" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"F:\\Anandhi\\workspace\\robotframework\\FirstSampleProjBrowserLib\\testScripts\\results\\browser\\traces\\temp\\cbbd7bea-65e1-4b25-acce-41b3c4540be5"}</msg>
+<msg time="2025-03-13T17:29:22.409796" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-03-13T17:29:22.439100" level="INFO">Successfully created context. </msg>
+<msg time="2025-03-13T17:29:22.439100" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<msg time="2025-03-13T17:29:23.637886" level="INFO">Successfully initialized new page object and opened url: https://www.demoblaze.com/#</msg>
+<arg>https://www.demoblaze.com/#</arg>
+<arg>chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="PASS" start="2025-03-13T17:29:22.170144" elapsed="1.467742"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-13T17:29:28.641890" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-13T17:29:23.637886" elapsed="5.004004"/>
+</kw>
+<kw name="Get Elements" owner="Browser">
+<msg time="2025-03-13T17:29:28.709060" level="INFO">Found locator('h4.card-title').first(),locator('h4.card-title').nth(1),locator('h4.card-title').nth(2),locator('h4.card-title').nth(3),locator('h4.card-title').nth(4),locator('h4.card-title').nth(5),locator('h4.card-title').nth(6),locator('h4.card-title').nth(7),locator('h4.card-title').nth(8) Locators successfully.</msg>
+<msg time="2025-03-13T17:29:28.710089" level="INFO">@{elements_list} = [ h4.card-title &gt;&gt; nth=0 | h4.card-title &gt;&gt; nth=1 | h4.card-title &gt;&gt; nth=2 | h4.card-title &gt;&gt; nth=3 | h4.card-title &gt;&gt; nth=4 | h4.card-title &gt;&gt; nth=5 | h4.card-title &gt;&gt; nth=6 | h4.card-title &gt;&gt; nth=7 ...</msg>
+<var>@{elements_list}</var>
+<arg>h4.card-title</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
+for all matched elements by ``selector``.</doc>
+<status status="PASS" start="2025-03-13T17:29:28.643851" elapsed="0.066238"/>
+</kw>
+<kw name="Log Many" owner="BuiltIn">
+<msg time="2025-03-13T17:29:28.711056" level="INFO">h4.card-title &gt;&gt; nth=0</msg>
+<msg time="2025-03-13T17:29:28.711056" level="INFO">h4.card-title &gt;&gt; nth=1</msg>
+<msg time="2025-03-13T17:29:28.711056" level="INFO">h4.card-title &gt;&gt; nth=2</msg>
+<msg time="2025-03-13T17:29:28.711056" level="INFO">h4.card-title &gt;&gt; nth=3</msg>
+<msg time="2025-03-13T17:29:28.711056" level="INFO">h4.card-title &gt;&gt; nth=4</msg>
+<msg time="2025-03-13T17:29:28.711056" level="INFO">h4.card-title &gt;&gt; nth=5</msg>
+<msg time="2025-03-13T17:29:28.711056" level="INFO">h4.card-title &gt;&gt; nth=6</msg>
+<msg time="2025-03-13T17:29:28.711056" level="INFO">h4.card-title &gt;&gt; nth=7</msg>
+<msg time="2025-03-13T17:29:28.711056" level="INFO">h4.card-title &gt;&gt; nth=8</msg>
+<arg>@{elements_list}</arg>
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<status status="PASS" start="2025-03-13T17:29:28.710089" elapsed="0.000967"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-03-13T17:29:28.743621" level="INFO">Text: 'Samsung galaxy s6'</msg>
+<msg time="2025-03-13T17:29:28.743621" level="INFO">${itemName} = Samsung galaxy s6</msg>
+<var>${itemName}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-03-13T17:29:28.712437" elapsed="0.031184"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${itemName}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-13T17:29:28.743621" elapsed="0.001500"/>
+</kw>
+<var name="${element}">h4.card-title &gt;&gt; nth=0</var>
+<status status="PASS" start="2025-03-13T17:29:28.712437" elapsed="0.032684"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-03-13T17:29:28.762645" level="INFO">Text: 'Nokia lumia 1520'</msg>
+<msg time="2025-03-13T17:29:28.762645" level="INFO">${itemName} = Nokia lumia 1520</msg>
+<var>${itemName}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-03-13T17:29:28.746148" elapsed="0.016497"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${itemName}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-13T17:29:28.762645" elapsed="0.001001"/>
+</kw>
+<var name="${element}">h4.card-title &gt;&gt; nth=1</var>
+<status status="PASS" start="2025-03-13T17:29:28.745121" elapsed="0.018525"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-03-13T17:29:28.779992" level="INFO">Text: 'Nexus 6'</msg>
+<msg time="2025-03-13T17:29:28.779992" level="INFO">${itemName} = Nexus 6</msg>
+<var>${itemName}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-03-13T17:29:28.763646" elapsed="0.016346"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${itemName}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-13T17:29:28.780994" elapsed="0.000000"/>
+</kw>
+<var name="${element}">h4.card-title &gt;&gt; nth=2</var>
+<status status="PASS" start="2025-03-13T17:29:28.763646" elapsed="0.017348"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-03-13T17:29:28.798508" level="INFO">Text: 'Samsung galaxy s7'</msg>
+<msg time="2025-03-13T17:29:28.798508" level="INFO">${itemName} = Samsung galaxy s7</msg>
+<var>${itemName}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-03-13T17:29:28.781989" elapsed="0.016519"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${itemName}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-13T17:29:28.799505" elapsed="0.000000"/>
+</kw>
+<var name="${element}">h4.card-title &gt;&gt; nth=3</var>
+<status status="PASS" start="2025-03-13T17:29:28.781989" elapsed="0.017516"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-03-13T17:29:28.815027" level="INFO">Text: 'Iphone 6 32gb'</msg>
+<msg time="2025-03-13T17:29:28.816028" level="INFO">${itemName} = Iphone 6 32gb</msg>
+<var>${itemName}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-03-13T17:29:28.800502" elapsed="0.015526"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${itemName}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-13T17:29:28.816028" elapsed="0.000000"/>
+</kw>
+<var name="${element}">h4.card-title &gt;&gt; nth=4</var>
+<status status="PASS" start="2025-03-13T17:29:28.799505" elapsed="0.016523"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-03-13T17:29:28.831434" level="INFO">Text: 'Sony xperia z5'</msg>
+<msg time="2025-03-13T17:29:28.831434" level="INFO">${itemName} = Sony xperia z5</msg>
+<var>${itemName}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-03-13T17:29:28.817027" elapsed="0.014407"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${itemName}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-13T17:29:28.831434" elapsed="0.001173"/>
+</kw>
+<var name="${element}">h4.card-title &gt;&gt; nth=5</var>
+<status status="PASS" start="2025-03-13T17:29:28.817027" elapsed="0.015580"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-03-13T17:29:28.848085" level="INFO">Text: 'HTC One M9'</msg>
+<msg time="2025-03-13T17:29:28.848085" level="INFO">${itemName} = HTC One M9</msg>
+<var>${itemName}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-03-13T17:29:28.832607" elapsed="0.015478"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${itemName}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-13T17:29:28.848589" elapsed="0.000000"/>
+</kw>
+<var name="${element}">h4.card-title &gt;&gt; nth=6</var>
+<status status="PASS" start="2025-03-13T17:29:28.832607" elapsed="0.015982"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-03-13T17:29:28.861329" level="INFO">Text: 'Sony vaio i5'</msg>
+<msg time="2025-03-13T17:29:28.862490" level="INFO">${itemName} = Sony vaio i5</msg>
+<var>${itemName}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-03-13T17:29:28.849590" elapsed="0.012900"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${itemName}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-13T17:29:28.862490" elapsed="0.001250"/>
+</kw>
+<var name="${element}">h4.card-title &gt;&gt; nth=7</var>
+<status status="PASS" start="2025-03-13T17:29:28.848589" elapsed="0.015151"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-03-13T17:29:28.874691" level="INFO">Text: 'Sony vaio i7'</msg>
+<msg time="2025-03-13T17:29:28.874691" level="INFO">${itemName} = Sony vaio i7</msg>
+<var>${itemName}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-03-13T17:29:28.863740" elapsed="0.010951"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${itemName}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-13T17:29:28.874691" elapsed="0.002285"/>
+</kw>
+<var name="${element}">h4.card-title &gt;&gt; nth=8</var>
+<status status="PASS" start="2025-03-13T17:29:28.863740" elapsed="0.013236"/>
+</iter>
+<var>${element}</var>
+<value>@{elements_list}</value>
+<status status="PASS" start="2025-03-13T17:29:28.712437" elapsed="0.165566"/>
+</for>
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-03-13T17:29:29.170968" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-13T17:29:28.878003" elapsed="0.292965"/>
+</kw>
+<status status="PASS" start="2025-03-13T17:29:22.165409" elapsed="7.006574"/>
+</test>
+<test id="s1-t3" name="Using Dictionary" line="35">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-03-13T17:29:29.204641" level="INFO">&amp;{dictItems} = { a=10 | b=20 | c={30,40,50} }</msg>
+<var>&amp;{dictItems}</var>
+<arg>a=10</arg>
+<arg>b=20</arg>
+<arg>c={30,40,50}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-03-13T17:29:29.204047" elapsed="0.000594"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>"Value of a",${dictItems.a}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-13T17:29:29.204641" elapsed="0.001061"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>"Value of b",${dictItems}[b]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-13T17:29:29.205702" elapsed="0.000000"/>
+</kw>
+<kw name="Log Many" owner="BuiltIn">
+<msg time="2025-03-13T17:29:29.207865" level="INFO">"Items in Dictionary",{'a': '10', 'b': '20', 'c': '{30,40,50}'}</msg>
+<arg>"Items in Dictionary",&amp;{dictItems}</arg>
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<status status="PASS" start="2025-03-13T17:29:29.207865" elapsed="0.000000"/>
+</kw>
+<kw name="Log Many" owner="BuiltIn">
+<msg time="2025-03-13T17:29:29.207865" level="INFO">"Value of c",{30,40,50}</msg>
+<arg>"Value of c",${dictItems}[c]</arg>
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<status status="PASS" start="2025-03-13T17:29:29.207865" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>"Item in c",${dictItems}[c][2]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-13T17:29:29.207865" elapsed="0.000000"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-03-13T17:29:29.207865" level="INFO">&amp;{user} = { name=John | password=welcome123 }</msg>
+<var>&amp;{user}</var>
+<arg>name=John</arg>
+<arg>password=welcome123</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-03-13T17:29:29.207865" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-03-13T17:29:29.210126" level="INFO">"UserName is :",John, "Password is :",welcome123</msg>
+<arg>"UserName is :",${user}[name], "Password is :",${user.password}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-03-13T17:29:29.210126" elapsed="0.001108"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${user}[name]</arg>
+<arg>John</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-03-13T17:29:29.211870" elapsed="0.000775"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-03-13T17:29:29.214020" level="INFO">&amp;{books} = { book1={id=1, name=Robot} | book2={id=2, name=Python} }</msg>
+<var>&amp;{books}</var>
+<arg>book1={id=1, name=Robot}</arg>
+<arg>book2={id=2, name=Python}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-03-13T17:29:29.212645" elapsed="0.001375"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>"List of books : ",${books}[book1]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-13T17:29:29.214020" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-03-13T17:29:29.200917" elapsed="0.013103"/>
+</test>
+<test id="s1-t4" name="Using Environment Variable" line="48">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${url.dev}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-13T17:29:29.247503" elapsed="0.001000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${url.${env}}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-13T17:29:29.249490" elapsed="0.000446"/>
+</kw>
+<status status="PASS" start="2025-03-13T17:29:29.243572" elapsed="0.006364"/>
+</test>
+<test id="s1-t5" name="Using System variables" line="52">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Current user: %{USERNAME}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-13T17:29:29.285721" elapsed="0.000000"/>
+</kw>
+<kw name="Run" owner="OperatingSystem">
+<msg time="2025-03-13T17:29:29.294694" level="INFO">Running command 'C:\Program Files\Java\jdk-17\javac 2&gt;&amp;1'.</msg>
+<arg>%{JAVA_HOME}${/}javac</arg>
+<doc>Runs the given command in the system and returns the output.</doc>
+<status status="PASS" start="2025-03-13T17:29:29.285721" elapsed="0.017400"/>
+</kw>
+<status status="PASS" start="2025-03-13T17:29:29.282568" elapsed="0.021843"/>
+</test>
+<status status="PASS" start="2025-03-13T17:29:20.768360" elapsed="8.568243"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="VariableSample" id="s1" pass="5" fail="0" skip="0">VariableSample</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-03-13T17:29:22.170144" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+</errors>
+</robot>
