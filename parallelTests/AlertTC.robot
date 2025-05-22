@@ -21,9 +21,11 @@ Handling normal alert
     ${promise} =       Promise To    Wait For Alert    action=dismiss    text= Press a button!
     Click             \#confirmBtn
     ${text} =          Wait For      ${promise}
+    log    ${text}
 
     ${promise} =       Promise To    Wait For Alert    action=accept    prompt_input=Hello Welcome
     Click             \#promptBtn
     ${text} =          Wait For      ${promise}
+    log    ${text}
  
 
